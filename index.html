@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Booking System</title>
+
+    <style>
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body{
+            background:#0f172a;
+            color:white;
+        }
+
+        /* Header */
+
+        header{
+            background:#020617;
+            padding:15px 40px;
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+        }
+
+        header h1{
+            color:#ef4444;
+        }
+
+        nav a{
+            color:white;
+            text-decoration:none;
+            margin-left:20px;
+            font-size:18px;
+        }
+
+        nav a:hover{
+            color:#ef4444;
+        }
+
+        /* Hero Section */
+
+        .hero{
+            height:350px;
+            background:url('https://images.unsplash.com/photo-1489599849927-2ee91cede3ba');
+            background-size:cover;
+            background-position:center;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            text-align:center;
+        }
+
+        .hero h2{
+            font-size:50px;
+            margin-bottom:10px;
+        }
+
+        .hero p{
+            font-size:22px;
+        }
+
+        /* Movies Section */
+
+        .movies{
+            padding:50px 20px;
+            text-align:center;
+        }
+
+        .movies h2{
+            color:#ef4444;
+            margin-bottom:40px;
+            font-size:35px;
+        }
+
+        .movie-container{
+            display:flex;
+            justify-content:center;
+            gap:25px;
+            flex-wrap:wrap;
+        }
+
+        .movie-card{
+            width:300px;
+            background:#1e293b;
+            border-radius:10px;
+            overflow:hidden;
+            box-shadow:0 0 10px rgba(0,0,0,0.5);
+        }
+
+        .movie-card img{
+            width:100%;
+            height:350px;
+            object-fit:cover;
+        }
+
+        .movie-card h3{
+            margin:15px 0 10px;
+        }
+
+        .movie-card p{
+            color:#cbd5e1;
+            padding:0 15px 15px;
+        }
+
+        .btn{
+            display:inline-block;
+            margin-bottom:20px;
+            padding:10px 20px;
+            background:#ef4444;
+            color:white;
+            text-decoration:none;
+            border:none;
+            border-radius:5px;
+            cursor:pointer;
+        }
+
+        .btn:hover{
+            background:#dc2626;
+        }
+
+        /* Booking Form */
+
+        .booking{
+            width:400px;
+            margin:50px auto;
+            background:#1e293b;
+            padding:30px;
+            border-radius:10px;
+        }
+
+        .booking h2{
+            text-align:center;
+            margin-bottom:20px;
+            color:#ef4444;
+        }
+
+        .booking input,
+        .booking select{
+            width:100%;
+            padding:12px;
+            margin-bottom:15px;
+            border:none;
+            border-radius:5px;
+        }
+
+        .booking button{
+            width:100%;
+        }
+
+        /* Footer */
+
+        footer{
+            background:#020617;
+            text-align:center;
+            padding:15px;
+            margin-top:40px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+
+    <header>
+
+        <h1>CineBook</h1>
+
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Movies</a>
+            <a href="#">Theaters</a>
+            <a href="#">Contact</a>
+        </nav>
+
+    </header>
+
+    <!-- Hero Section -->
+
+    <section class="hero">
+
+        <div>
+            <h2>Book Movie Tickets Online</h2>
+            <p>Enjoy Your Favorite Movies Anytime</p>
+        </div>
+
+    </section>
+
+    <!-- Movies -->
+
+    <section class="movies">
+
+        <h2>Now Showing</h2>
+
+        <div class="movie-container">
+
+            <div class="movie-card">
+
+                <img src="https://images.unsplash.com/photo-1536440136628-849c177e76a1">
+
+                <h3>Action Hero</h3>
+
+                <p>Action | Adventure | 2h 20m</p>
+
+                <button class="btn">Book Ticket</button>
+
+            </div>
+
+            <div class="movie-card">
+
+                <img src="https://images.unsplash.com/photo-1485846234645-a62644f84728">
+
+                <h3>Spider World</h3>
+
+                <p>Fantasy | Adventure | 2h 10m</p>
+
+                <button class="btn">Book Ticket</button>
+
+            </div>
+
+            <div class="movie-card">
+
+                <img src="https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c">
+
+                <h3>Dark Knight</h3>
+
+                <p>Thriller | Action | 2h 30m</p>
+
+                <button class="btn">Book Ticket</button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Booking Form -->
+
+    <section class="booking">
+
+        <h2>Movie Ticket Booking</h2>
+
+        <form>
+
+            <input type="text" placeholder="Enter Your Name" required>
+
+            <select required>
+                <option>Select Movie</option>
+                <option>Action Hero</option>
+                <option>Spider World</option>
+                <option>Dark Knight</option>
+            </select>
+
+            <select required>
+                <option>Select Show Time</option>
+                <option>10:00 AM</option>
+                <option>02:00 PM</option>
+                <option>07:00 PM</option>
+            </select>
+
+            <input type="date" required>
+
+            <input type="number" placeholder="Number of Tickets" required>
+
+            <button class="btn">Confirm Booking</button>
+
+        </form>
+
+    </section>
+
+    <!-- Footer -->
+
+    <footer>
+
+        <p>© 2026 CineBook. All Rights Reserved.</p>
+
+    </footer>
+
+</body>
+</html>
